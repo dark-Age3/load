@@ -154,7 +154,7 @@ export default function handler(req, res) {
     
     <script>
         function copyScript() {
-            const script = 'loadstring(game:HttpGet("https://404-hub.vercel.app/api/script"))()';
+            const script = 'loadstring(game:HttpGet("https://load-lime.vercel.app/"))()';
             const btn = document.querySelector('.copy-btn');
             
             navigator.clipboard.writeText(script).then(() => {

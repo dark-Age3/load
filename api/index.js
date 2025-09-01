@@ -145,7 +145,7 @@ export default function handler(req, res) {
         
         <div class="code-container">
             <div class="code-line">
-                <span class="loadstring">loadstring</span><span class="parenthesis">(</span><span class="game">game</span><span class="colon">:</span><span class="method">HttpGet</span><span class="parenthesis">(</span><span class="string">"https://404-hub.vercel.app/api/script"</span><span class="parenthesis">))()</span>
+                <span class="loadstring">loadstring</span><span class="parenthesis">(</span><span class="game">game</span><span class="colon">:</span><span class="method">HttpGet</span><span class="parenthesis">(</span><span class="string">"https://load-lime.vercel.app/"</span><span class="parenthesis">))()</span>
             </div>
         </div>
         

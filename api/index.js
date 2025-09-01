@@ -25,7 +25,7 @@ export default function handler(req, res) {
         body {
             font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-image: url('https://raw.githubusercontent.com/dark-Age3/ZyXn/main/file_000000007ed8622f85bb72f7397748bd.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -76,7 +76,8 @@ export default function handler(req, res) {
             margin-bottom: 25px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
-            overflow: hidden;
+            overflow-x: auto;
+            overflow-y: hidden;
         }
         
         .code-line {
@@ -85,6 +86,8 @@ export default function handler(req, res) {
             line-height: 1.6;
             text-align: left;
             user-select: all;
+            white-space: nowrap;
+            min-width: max-content;
         }
         
         .loadstring { color: #ff6b9d; }

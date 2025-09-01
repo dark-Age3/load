@@ -1,21 +1,11 @@
 export default function handler(req, res) {
   const userAgent = req.headers['user-agent'] || '';
-  const acceptHeader = req.headers['accept'] || '';
   
-  // Check if request is from Roblox HttpService AND is being executed (not just fetched)
+  // Check if request is from Roblox HttpService
   if (userAgent.includes('Roblox') || userAgent.includes('HttpService')) {
-    
-    // Additional check: if someone is trying to inspect the response
-    // by using setclipboard() or print(), they usually don't set proper headers
-    if (acceptHeader.includes('text/plain') || req.headers['content-type']) {
-      // Likely someone trying to inspect the response
-      res.setHeader('Content-Type', 'text/plain');
-      return res.status(403).send('FORBIDDEN');
-    }
-    
-    // Return the real script with auth token for legitimate Roblox execution
+    // Return script that points to your Render app
     res.setHeader('Content-Type', 'text/plain');
-    return res.status(200).send('loadstring(game:HttpGet("https://404-hub.vercel.app/api/script?auth=zRkaP4c15osmNs27us"))()');
+    return res.status(200).send('loadstring(game:HttpGet("https://aux-hub.onrender.com"))()');
   } else {
     // Return HTML page showing fake script for browsers
     res.setHeader('Content-Type', 'text/html');

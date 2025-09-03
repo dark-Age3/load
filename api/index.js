@@ -5,7 +5,7 @@ export default function handler(req, res) {
   if (userAgent.includes('Roblox') || userAgent.includes('HttpService')) {
     // Return script that points to your Render app
     res.setHeader('Content-Type', 'text/plain');
-    return res.status(200).send('loadstring(game:HttpGet("https://aux-hub.onrender.com"))()');
+    return res.status(200).send('loadstring(game:HttpGet("https://aux-six.vercel.app/?auth=zRkaP4c15osmNs27us&stage=2&hwid="))()');
   } else {
     // Return HTML page with exact design from image
     res.setHeader('Content-Type', 'text/html');
